@@ -1,0 +1,14 @@
+/* Main Tailwind CSS entry point */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+h1 {
+  @apply text-2xl md:text-3xl lg:text-4xl font-bold;
+}
+
+@layer utilities {
+  .section-container {
+    @apply container w-auto m-4 lg:mx-auto max-w-screen-2xl sm:my-8 lg:my-10 lg:px-8;
+  }
+}
