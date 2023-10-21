@@ -6,8 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['SomeType Mono', 'monospace'],
-        // Add other font families as needed
+        'sans': ['SomeType Mono', 'monospace']
       },
     },
   },
