@@ -9,49 +9,68 @@
   </head>
   <body>
     <header class="bg-white shadow-sm sticky top-0">
-      <div class="hidden">
-        <div class="section-container flex justify-between items-center py-4 !mt-0">
-          <!-- Logo / Title -->
-          <div class="text-2xl font-semibold">
-            Pixelated Frankie
-          </div>
-  
-          <!-- Desktop Navigation -->
-          <nav class="hidden lg:flex space-x-4">
-            <a href="#about" class="text-gray-600 hover:text-black">About</a>
-            <!-- <a href="#" class="text-gray-600 hover:text-black">Portfolio</a> -->
-            <a href="#contact" class="text-gray-600 hover:text-black">Contact</a>
-          </nav>
-  
-          <!-- Mobile Menu Button -->
-          <div class="lg:hidden">
-            <button id="menuBtn" class="p-2">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-              </svg>
-            </button>
-          </div>
+      <div class="section-container flex justify-between items-center py-4 !mt-0">
+        <!-- Logo / Title -->
+        <div class="text-sm lg:text-2xl font-semibold">
+          Pixelated Frankie
         </div>
-  
-        <!-- Mobile Navigation -->
-        <nav id="menu" class="lg:hidden hidden pb-4">
-          <ul>
-            <li><a href="#about" class="text-gray-600 hover:text-black hover:bg-gray-100 px-4 py-2 block">About</a></li>
-            <!-- <li><a href="#" class="text-gray-600 hover:text-black hover:bg-gray-100 px-4 py-2 block">Portfolio</a></li> -->
-            <li><a href="#contact" class="text-gray-600 hover:text-black hover:bg-gray-100 px-4 py-2 block">Contact</a></li>
-          </ul>
+
+        <!-- Desktop Navigation -->
+        <nav>
+          <a href="#about" class="px-2 lg:px-4 text-xs lg:text-base text-gray-600 hover:text-black">About</a>
+          <!-- <a href="#" class="px-2 lg:px-4 text-xs lg:text-base text-gray-600 hover:text-black">Portfolio</a> -->
+          <a href="#contact" class="px-2 lg:px-4 text-xs lg:text-base text-gray-600 hover:text-black">Contact</a>
         </nav>
+
+        <!-- Mobile Menu Button
+        <div class="lg:hidden">
+          <button id="menuBtn" class="p-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div> -->
       </div>
+
+      <!-- Mobile Navigation -->
+      <!-- <nav id="menu" class="lg:hidden hidden pb-4">
+        <ul>
+          <li><a href="#about" class="text-gray-600 hover:text-black hover:bg-gray-100 px-4 py-2 block">About</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-black hover:bg-gray-100 px-4 py-2 block">Portfolio</a></li>
+          <li><a href="#contact" class="text-gray-600 hover:text-black hover:bg-gray-100 px-4 py-2 block">Contact</a></li>
+        </ul>
+      </nav> -->
     </header>
 
-    <div class="section-container flex flex-wrap items-center justify-around lg:justify-center h-60 lg:h-84 gap-8 lg:gap-16">
+    <div id="about" class="section-container flex flex-wrap items-center justify-around lg:justify-center gap-8 lg:gap-16 max-w-md border border-gray-200 pb-16">
       <h1 class="text-center w-full bg-slate-300 py-2 rounded">Pixelated Frankie
         <small class="text-sm block font-normal">Frankie Dixon — Senior Front End Engineer</small>
       </h1>
       <img src="dist/img/pixel-frankie.jpg" class="max-w-sm rounded-full">
-      <p class="max-lg:text-center max-w-xl">I specialize in crafting user-centric digital experiences. With a unique educational background that spans both the natural sciences and computer programming, I bring a multidisciplinary approach to problem-solving. Passionate about sustainability and influenced by cutting-edge research in theory of mind, my work goes beyond code to create meaningful interactions for users.</p>
+      <p class="max-lg:text-center">I specialize in crafting user-centric digital experiences. With a unique educational background that spans both the natural sciences and computer programming, I bring a multidisciplinary approach to problem-solving. Passionate about sustainability and influenced by cutting-edge research in theory of mind, my work goes beyond code to create meaningful interactions for users.</p>
     </div>
 
+    <!-- Contact Form -->
+    <div class="section-container">
+      <h2 class="w-full max-sm:text-center my-8 text-center">Contact Frankie</h2>
+
+      <form action="https://formspree.io/f/moqorvzj" id="my-form" class="max-w-xl mx-auto" method="POST">
+        <div id="my-form-status" class="text-center w-full my-8 text-lg font-semibold"></div>
+        <div class="mb-4">
+          <label for="email" class="block text-sm font-medium text-gray-600">Email Address</label>
+          <input type="email" name="email" class=" border border-grey-200 mt-1 p-2 w-full rounded-md" required>
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-sm font-medium text-gray-600">Message</label>
+          <input type="text" name="message" rows="4" class="border border-grey-200 mt-1 p-2 w-full rounded-md" required></textarea>
+        </div>
+        <button type="submit" class="px-4 py-2 bg-lime-600 text-white rounded w-full">
+          Full Send
+        </button>
+      </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
     <script src="dist/js/index.js"></script>
   </body>
 </html>
