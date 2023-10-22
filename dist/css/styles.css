@@ -576,12 +576,24 @@ video {
   display: none;
 }
 
+.aspect-auto {
+  aspect-ratio: auto;
+}
+
 .h-6 {
   height: 1.5rem;
 }
 
+.h-96 {
+  height: 24rem;
+}
+
 .w-6 {
   width: 1.5rem;
+}
+
+.w-96 {
+  width: 24rem;
 }
 
 .w-full {
@@ -791,6 +803,16 @@ video {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+}
+
+@font-face {
+  font-family: 'SomeType Mono';
+
+  src: url('../fonts/SometypeMono-VariableFont_wght.ttf') format('ttf');
+
+  font-weight: 400 600 700;
+
+  font-style: normal;
 }
 
 h1 {
