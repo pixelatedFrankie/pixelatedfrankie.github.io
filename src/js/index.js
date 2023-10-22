@@ -11,6 +11,31 @@
 
 
 
+// Pixelated Frankie Image Swap
+$(document).ready(function() {
+  let imgElement = $('#img-pixel-frankie');
+  let imgPath = imgElement.attr('src');
+  let basePath = imgPath.substring(0, imgPath.lastIndexOf('-') + 1);
+
+  // Show/Hide dropdown menu
+  $('#menu-button').click(function() {
+    $('#dropdown-menu').toggle();
+  });
+
+  // Swap image on clicking an option
+  $('.image-option').click(function(e) {
+    e.preventDefault();
+    let imageNumber = $(this).data('image');
+    let newImgPath = `${basePath}${imageNumber}.jpg`;
+    imgElement.attr('src', newImgPath);
+    $('#dropdown-menu').hide();
+  });
+});
+
+
+
+
+
 
 
 // Client-side validation and reCAPTCHA integration
