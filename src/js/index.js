@@ -1,15 +1,3 @@
-// Toggle mobile menu
-// const menuBtn = document.getElementById('menuBtn');
-// const menu = document.getElementById('menu');
-
-// menuBtn.addEventListener('click', () => {
-//   menu.classList.toggle('hidden');
-// });
-
-// Pixelation of image hover over
-
-
-
 
 // Pixelated Frankie Image Swap
 $(document).ready(function() {
@@ -31,11 +19,6 @@ $(document).ready(function() {
     $('#dropdown-menu').hide();
   });
 });
-
-
-
-
-
 
 
 // Client-side validation and reCAPTCHA integration
@@ -66,7 +49,6 @@ $(document).ready(function() {
 
 
 // Email to Formspree
-
 var form = document.getElementById("my-form");
 async function handleSubmit(event) {
 event.preventDefault();
