@@ -35,6 +35,7 @@
   "watch": {
     "build:css": {
       "patterns": [
+        "./src/css/tailwind.css",
         "./src/components/common/**/*.js"
       ]
     }
